@@ -1,0 +1,95 @@
+import { ReconciliationIssue } from '../types';
+
+export const INITIAL_RECONCILIATION_ISSUES: ReconciliationIssue[] = [
+  {
+    id: 'rec_issue_01',
+    memberId: 'mem_10',
+    memberName: 'Chloe Hemsworth',
+    memberEmail: 'chloe.h@byronbaypunters.com',
+    discordUsername: 'chloepunts',
+    stripeStatus: 'Active (Weekly A$37)',
+    discordStatus: 'Role Missing',
+    expectedStatus: '@Premium Role Active',
+    recommendedAction: 'Assign @Premium role via Discord Bot (was delayed by rate limit)',
+    severity: 'high',
+    type: 'missing_role',
+    isSafeToAutoFix: true,
+    resolved: false
+  },
+  {
+    id: 'rec_issue_02',
+    memberId: 'mem_11',
+    memberName: 'Harrison Miller',
+    memberEmail: 'hmiller@geelongsports.com.au',
+    discordUsername: 'harry_m_tips',
+    stripeStatus: 'Active (Monthly A$99)',
+    discordStatus: 'Role Missing',
+    expectedStatus: '@Premium Role Active',
+    recommendedAction: 'Assign @Premium role in Discord',
+    severity: 'high',
+    type: 'missing_role',
+    isSafeToAutoFix: true,
+    resolved: false
+  },
+  {
+    id: 'rec_issue_03',
+    memberId: 'mem_20',
+    memberName: 'Alexander White',
+    memberEmail: 'awhite@newcastlemail.com.au',
+    discordUsername: 'alex_white_punts',
+    stripeStatus: 'Active (Monthly A$99)',
+    discordStatus: 'Role Missing',
+    expectedStatus: '@Premium Role Active',
+    recommendedAction: 'Assign @Premium role in Discord',
+    severity: 'high',
+    type: 'missing_role',
+    isSafeToAutoFix: true,
+    resolved: false
+  },
+  {
+    id: 'rec_issue_04',
+    memberId: 'mem_12',
+    memberName: 'Liam O\'Connor',
+    memberEmail: 'liam.oc@hobartracing.com.au',
+    discordUsername: 'liam_oc_punts',
+    stripeStatus: 'Expired (Ended 2026-10-10)',
+    discordStatus: 'Role Still Assigned',
+    expectedStatus: 'Role Removed',
+    recommendedAction: 'Revoke @Premium role to match expired Stripe subscription',
+    severity: 'medium',
+    type: 'unexpected_role',
+    isSafeToAutoFix: true,
+    resolved: false
+  },
+  {
+    id: 'rec_issue_05',
+    memberId: 'mem_22',
+    memberName: 'Mason Martin',
+    memberEmail: 'mmartin@canberrapunters.com',
+    discordUsername: 'mason_m_tipping',
+    stripeStatus: 'Expired (Ended 2026-10-05)',
+    discordStatus: 'Role Still Assigned',
+    expectedStatus: 'Role Removed',
+    recommendedAction: 'Revoke @Premium role in Discord',
+    severity: 'medium',
+    type: 'unexpected_role',
+    isSafeToAutoFix: true,
+    resolved: false
+  },
+  {
+    id: 'rec_issue_06',
+    memberId: 'mem_09',
+    memberName: 'Nathan Campbell',
+    memberEmail: 'ncampbell@canberramail.com',
+    discordUsername: 'Unlinked',
+    stripeStatus: 'Active (Paid A$99)',
+    discordStatus: 'Account Not Linked',
+    expectedStatus: 'Awaiting Discord OAuth',
+    recommendedAction: 'Send automated email reminder with 1-click Discord linking token',
+    severity: 'low',
+    type: 'unlinked_member',
+    isSafeToAutoFix: false,
+    resolved: false
+  }
+];
+
